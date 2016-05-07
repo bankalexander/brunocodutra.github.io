@@ -1,0 +1,104 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.navbar {
+    border-bottom: none;
+}
+
+.navbar-default .navbar-nav > :not(.active) > a:hover,
+.navbar-default .navbar-nav > :not(.active) > a:focus {
+    text-shadow: 0 0 1px RGBA(255, 255, 255, .6);
+}
+
+.navbar-default .navbar-nav > .active > a.inverse {
+    color: #FFF;
+    background-color: #333;
+}
+
+header {
+    padding: 130px 0;
+}
+
+section {
+    padding: 70px 0;
+}
+
+header, section {
+    min-height: 100%;
+}
+
+header.inverse, section.inverse {
+    color: #FFF;
+    background-color: #333;
+}
+
+header .row, section .row {
+    margin-bottom: 50px;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    position: relative;
+    text-transform: uppercase;
+}
+
+hr.star {
+    max-width: 250px;
+    border-color: #333;
+    border-width: 5px;
+}
+
+.inverse hr.star {
+    border-color: #FFF;
+}
+
+hr.star:after {
+    content: "\f005";
+    font-family: FontAwesome;
+    font-size: 2em;
+    text-align: center;
+    position: relative;
+    top: -.8em;
+    padding: 0 10px;
+    background-color: #FFF;
+}
+
+.inverse hr.star:after {
+    color: #FFF;
+    background-color: #333;
+}
+
+p {
+    font-size: 1.4em;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+footer {
+    height: 200px;
+    padding-top: 30px;
+}
+
+footer .row {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #333;
+    font-size: 4em;
+    font-weight: 700;
+}
+
+footer a:hover, footer a:focus {
+    color: #E74C3C;
+}
