@@ -20,4 +20,15 @@ $(function(){
             .removeClass("navbar-inverse")
             .addClass($(this).attr("data-navbar"))
     })
+
+    $("a.scroll").on("click", function(event) {
+        var href = $.attr(this, "href");
+        $("html, body").animate({
+            scrollTop: $(href).offset().top
+        }, 300, function(){
+            window.location.hash = href;
+        });
+
+        return false;
+    })
 })
