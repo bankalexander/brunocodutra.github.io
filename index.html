@@ -32,8 +32,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body data-spy="scroll">
-    <nav class="navbar navbar-default navbar-fixed-top">
+  <body data-spy="scroll" data-offset="60">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sections">
@@ -46,12 +46,12 @@
         </div>
 
         <ul id="headers" class="nav navbar-nav hidden">
-          <li><a href="#intro"></a></li>
+          <li data-navbar="navbar-inverse"><a href="#intro"></a></li>
         </ul>
 
         <ul id="sections" class="nav navbar-nav navbar-right collapse navbar-collapse">
-          <li><a href="#about">about me</a></li>
-          <li><a href="#portfolio" class="inverse">portfolio</a></li>
+          <li data-navbar="navbar-inverse"><a href="#about">about me</a></li>
+          <li data-navbar="navbar-default"><a href="#portfolio">portfolio</a></li>
         </ul>
       </div>
     </nav>
