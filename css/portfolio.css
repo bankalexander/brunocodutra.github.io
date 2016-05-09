@@ -32,39 +32,46 @@ p {
     text-align: justify;
 }
 
-img {
-    height: 200px;
-    width: 200px;
+.project {
+    margin-bottom: 15px;
 }
 
-header {
-    padding: 130px 0 70px;
+img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+img.portrait {
+    max-width: 300px;
+}
+
+img.logo {
+    max-width: 400px;
+}
+
+#intro {
+    min-height: 100%;
+    padding-top: 130px;
 }
 
 section {
     padding: 70px 0;
 }
 
-header, section {
-    min-height: 100%;
-}
-
-header.inverse, section.inverse {
+section.inverse {
     color: #fff;
     background-color: #333;
-}
-
-header .row, section .row {
-    margin-bottom: 50px;
 }
 
 hr.star {
     max-width: 250px;
     border-color: #333;
     border-width: 5px;
+    margin-bottom: 30px;
 }
 
-header.inverse hr.star, section.inverse hr.star {
+.inverse hr.star {
     border-color: #fff;
 }
 
@@ -79,7 +86,7 @@ hr.star:after {
     background-color: #fff;
 }
 
-header.inverse hr.star:after, section.inverse hr.star:after {
+.inverse hr.star:after {
     color: #fff;
     background-color: #333;
 }
@@ -87,10 +94,6 @@ header.inverse hr.star:after, section.inverse hr.star:after {
 footer {
     height: 200px;
     padding-top: 30px;
-}
-
-footer .row {
-    margin-bottom: 10px;
 }
 
 footer a {
