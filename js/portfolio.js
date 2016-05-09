@@ -14,11 +14,10 @@ $(function(){
     })
 
     $("#sections > li").on("activate.bs.scrollspy", function(){
-        $(this)
-            .closest("nav")
-            .removeClass("navbar-default")
-            .removeClass("navbar-inverse")
-            .addClass($(this).attr("data-navbar"))
+        $(this).siblings().css({backgroundColor: ""});
+        $(this).css({
+            backgroundColor: $($("> a", this).attr("href")).css("background-color")
+        });
     })
 
     $("a.scroll").on("click", function(event) {
