@@ -3,14 +3,14 @@ $(function(){
         $(this)
             .parentsUntil("nav")
             .find(".navbar-header > .navbar-brand")
-            .addClass("hidden");
+            .addClass("transparent");
     })
 
     $("#sections > li:not(:first-child)").on("activate.bs.scrollspy", function(){
         $(this)
             .parentsUntil("nav")
             .find(".navbar-header > .navbar-brand")
-            .removeClass("hidden");
+            .removeClass("transparent");
     })
 
     $("#sections > li").on("activate.bs.scrollspy", function(){
@@ -25,7 +25,7 @@ $(function(){
         var href = $.attr(this, "href");
         $("html, body").animate({
             scrollTop: $(href).offset().top
-        }, 300, function(){
+        }, 500, function(){
             window.location.hash = href;
         });
 
