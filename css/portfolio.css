@@ -21,13 +21,14 @@ nav.navbar-default :not(.active) > a {
 
 nav.navbar-default :not(.active) > a:hover,
 nav.navbar-default :not(.active) > a:focus {
-    text-shadow: 0 0 1em RGBA(255, 255, 255, .5);
-    transition: all .3s;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
+    text-shadow: 0 0 1em RGBA(255, 255, 255, .7);
+    transition: text-shadow .3s;
+    -webkit-transition: text-shadow .3s;
+    -moz-transition: text-shadow .3s;
 }
 
 .navbar-brand {
+    visibility: visible;
     opacity: 1;
     transition: opacity .3s;
     -webkit-transition: opacity .3s;
@@ -35,6 +36,7 @@ nav.navbar-default :not(.active) > a:focus {
 }
 
 .navbar-brand.transparent {
+    visibility: hidden;
     opacity: 0;
     transition: opacity .3s;
     -webkit-transition: opacity .3s;
@@ -87,6 +89,7 @@ section hr.star {
     border-color: #334d5c;
     border-width: 5px;
     margin-bottom: 30px;
+    color: currentColor;
 }
 
 section hr.star:after {
@@ -120,10 +123,11 @@ footer a {
     -moz-transition: all .3s;
 }
 
-footer a:hover {
+footer a:hover, footer a:focus, footer a:active {
     color: #fff;
-    text-shadow: 0 0 1em RGBA(255, 255, 255, .5);
-    transition: all .3s;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
+    outline: none;
+    text-shadow: 0 0 .5em RGBA(255, 255, 255, .7);
+    transition: text-shadow .3s;
+    -webkit-transition: text-shadow .3s;
+    -moz-transition: text-shadow .3s;
 }
