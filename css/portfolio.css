@@ -9,38 +9,54 @@ nav {
     font-weight: 700;
 }
 
-nav.navbar-default {
+nav a:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: currentColor;
+    transition: width .3s;
+    -webkit-transition: width .3s;
+    -moz-transition: width .3s;
+    -o-transition: width .3s;
+    -ms-transition: width .3s;
+}
+
+nav a:hover:after, nav a:focus:after, nav a:active:after {
+    width: 100%;
+    transition: width .3s;
+    -webkit-transition: width .3s;
+    -moz-transition: width .3s;
+    -o-transition: width .3s;
+    -ms-transition: width .3s;
+}
+
+nav a:hover, nav a:focus, nav a:active {
+    outline: none;
+}
+
+.navbar-default {
     border: none;
-}
-
-nav.navbar-default :not(.active) > a {
-    transition: all .3s;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-}
-
-nav.navbar-default :not(.active) > a:hover,
-nav.navbar-default :not(.active) > a:focus {
-    text-shadow: 0 0 1em RGBA(255, 255, 255, .7);
-    transition: text-shadow .3s;
-    -webkit-transition: text-shadow .3s;
-    -moz-transition: text-shadow .3s;
 }
 
 .navbar-brand {
     visibility: visible;
     opacity: 1;
-    transition: opacity .3s;
-    -webkit-transition: opacity .3s;
-    -moz-transition: opacity .3s;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
 }
 
 .navbar-brand.transparent {
     visibility: hidden;
     opacity: 0;
-    transition: opacity .3s;
-    -webkit-transition: opacity .3s;
-    -moz-transition: opacity .3s;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
 }
 
 h1, .h1, h2, .h2, h3, .h3 {
