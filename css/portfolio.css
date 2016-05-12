@@ -88,11 +88,16 @@ img.logo {
 
 #intro {
     min-height: 100%;
-    padding-top: 130px;
+}
+
+@media (min-height: 300px) {
+    #intro {
+        padding-top: 30vh;
+    }
 }
 
 section {
-    padding: 70px 0;
+    padding: 90px 0 120px;
     background-color: #fff;
 }
 
