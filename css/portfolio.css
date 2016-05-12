@@ -130,20 +130,33 @@ footer {
     background-color: #334D5C;
 }
 
-footer a {
+.social-btn {
     color: #fff;
-    font-size: 4em;
-    font-weight: 700;
-    transition: all .3s;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
+    font-size: 3.5em;
 }
 
-footer a:hover, footer a:focus, footer a:active {
+.social-btn:hover, .social-btn:focus, .social-btn:active {
     color: #fff;
     outline: none;
-    text-shadow: 0 0 .5em RGBA(255, 255, 255, .7);
-    transition: text-shadow .3s;
-    -webkit-transition: text-shadow .3s;
-    -moz-transition: text-shadow .3s;
+}
+
+.social-btn > i {
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+}
+
+.social-btn:hover > i, .social-btn:focus > i, .social-btn:active > i {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -ms-transition: all 0.4s;
 }
