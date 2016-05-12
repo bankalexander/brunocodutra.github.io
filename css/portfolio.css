@@ -144,11 +144,11 @@ footer {
 }
 
 .social-btn:hover > i, .social-btn:focus > i, .social-btn:active > i {
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
+    -webkit-transform: scale(1.2) rotate(360deg);
+    -moz-transform: scale(1.2) rotate(360deg);
+    -ms-transform: scale(1.2) rotate(360deg);
+    -o-transform: scale(1.2) rotate(360deg);
+    transform: scale(1.2) rotate(360deg);
 
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
