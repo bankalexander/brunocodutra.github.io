@@ -1,25 +1,4 @@
 $(function(){
-    $("#sections > li:first-child").on("activate.bs.scrollspy", function(){
-        $(this)
-            .parentsUntil("nav")
-            .find(".navbar-header > .navbar-brand")
-            .addClass("transparent");
-    })
-
-    $("#sections > li:not(:first-child)").on("activate.bs.scrollspy", function(){
-        $(this)
-            .parentsUntil("nav")
-            .find(".navbar-header > .navbar-brand")
-            .removeClass("transparent");
-    })
-
-    $("#sections > li").on("activate.bs.scrollspy", function(){
-        $(this).siblings().css({backgroundColor: ""});
-        $(this).css({
-            backgroundColor: $($("> a", this).attr("href")).css("background-color")
-        });
-    })
-
     $("a.scroll").on("click", function(event) {
         var href = $.attr(this, "href");
         $("html, body").animate({
