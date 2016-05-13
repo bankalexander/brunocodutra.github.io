@@ -5,7 +5,7 @@ html, body {
 
 nav {
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: .1em;
     font-weight: 700;
 }
 
@@ -58,36 +58,62 @@ p {
     text-align: justify;
 }
 
-.portfolio-item {
-    margin-bottom: 15px;
-}
-
 img {
     display: block;
     width: 100%;
-    margin: 0 auto;
-}
-
-img.portrait {
     max-width: 300px;
-}
-
-img.logo {
-    max-width: 400px;
+    margin: 0 auto;
 }
 
 #intro {
     min-height: 100%;
 }
 
-@media (min-height: 300px) {
+@media (min-height: 400px) {
     #intro {
-        padding-top: 30vh;
+        padding-top: 20vh;
+    }
+}
+
+.portrait {
+    margin-bottom: 30px;
+}
+
+.name {
+    margin-top: 2000px;
+    font-size: 2.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.description {
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+@media (min-width: 480px) {
+    .name {
+        font-size: 3em;
+    }
+
+    .description {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 768px) {
+    .name {
+        font-size: 4em;
+    }
+
+    .description {
+        font-size: 2em;
     }
 }
 
 section {
-    padding: 90px 0 120px;
+    padding: 80px 0 120px;
     background-color: #fff;
 }
 
@@ -116,6 +142,10 @@ section hr.star:after {
 
 section.colored hr.star:after {
     background-color: #fff8b2;
+}
+
+.portfolio-item {
+    margin-bottom: 15px;
 }
 
 footer {
