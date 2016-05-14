@@ -3,17 +3,54 @@ html, body {
     height: 100%;
 }
 
-nav {
+.navbar {
     text-transform: uppercase;
     letter-spacing: .1em;
     font-weight: 700;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
-nav a:hover, nav a:focus, nav a:active {
+.navbar .navbar-brand {
+    -webkit-transition: font-size .3s;
+    -moz-transition: font-size .3s;
+    -ms-transition: font-size .3s;
+    -o-transition: font-size .3s;
+    transition: font-size .3s;
+}
+
+@media (min-height: 700px) {
+    .navbar.expanded {
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .navbar.expanded .navbar-brand {
+        font-size: 1.5em;
+
+        -webkit-transition: font-size .3s;
+        -moz-transition: font-size .3s;
+        -ms-transition: font-size .3s;
+        -o-transition: font-size .3s;
+        transition: font-size .3s;
+    }
+}
+
+.navbar a:hover, .navbar a:focus, .navbar a:active {
     outline: none;
 }
 
-nav a:after {
+.navbar a:after {
     content: "";
     display: block;
     height: 2px;
@@ -27,7 +64,7 @@ nav a:after {
     transition: width .3s;
 }
 
-nav a:hover:after, nav a:focus:after, nav a:active:after {
+.navbar a:hover:after, .navbar a:focus:after, .navbar a:active:after {
     width: 100%;
 
     -webkit-transition: width .3s;
@@ -63,16 +100,6 @@ img {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
-}
-
-#intro {
-    min-height: 100%;
-}
-
-@media (min-height: 400px) {
-    #intro {
-        padding-top: 20vh;
-    }
 }
 
 .portrait {
@@ -115,6 +142,16 @@ img {
 section {
     padding: 80px 0 120px;
     background-color: #fff;
+}
+
+section:first-of-type {
+    min-height: 100%;
+}
+
+@media (min-height: 400px) {
+    section:first-of-type {
+        padding-top: 20vh;
+    }
 }
 
 section.colored {
