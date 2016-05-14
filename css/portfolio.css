@@ -3,60 +3,87 @@ html, body {
     height: 100%;
 }
 
-nav {
+.navbar {
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: .1em;
     font-weight: 700;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
-nav a:after {
+.navbar .navbar-brand {
+    -webkit-transition: font-size .3s;
+    -moz-transition: font-size .3s;
+    -ms-transition: font-size .3s;
+    -o-transition: font-size .3s;
+    transition: font-size .3s;
+}
+
+@media (min-height: 700px) {
+    .navbar.expanded {
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .navbar.expanded .navbar-brand {
+        font-size: 1.5em;
+
+        -webkit-transition: font-size .3s;
+        -moz-transition: font-size .3s;
+        -ms-transition: font-size .3s;
+        -o-transition: font-size .3s;
+        transition: font-size .3s;
+    }
+}
+
+.navbar a:hover, .navbar a:focus, .navbar a:active {
+    outline: none;
+}
+
+.navbar a:after {
     content: "";
     display: block;
     height: 2px;
     width: 0;
     background-color: currentColor;
-    transition: width .3s;
+
     -webkit-transition: width .3s;
     -moz-transition: width .3s;
-    -o-transition: width .3s;
     -ms-transition: width .3s;
+    -o-transition: width .3s;
+    transition: width .3s;
 }
 
-nav a:hover:after, nav a:focus:after, nav a:active:after {
+.navbar a:hover:after, .navbar a:focus:after, .navbar a:active:after {
     width: 100%;
-    transition: width .3s;
+
     -webkit-transition: width .3s;
     -moz-transition: width .3s;
-    -o-transition: width .3s;
     -ms-transition: width .3s;
+    -o-transition: width .3s;
+    transition: width .3s;
 }
 
-nav a:hover, nav a:focus, nav a:active {
-    outline: none;
+#sections .active a {
+    background-color: #fff;
+}
+
+#sections .colored.active a {
+    background-color: #fff8b2;
 }
 
 .navbar-default {
     border: none;
-}
-
-.navbar-brand {
-    visibility: visible;
-    opacity: 1;
-    transition: all .3s;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -o-transition: all .3s;
-    -ms-transition: all .3s;
-}
-
-.navbar-brand.transparent {
-    visibility: hidden;
-    opacity: 0;
-    transition: all .3s;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -o-transition: all .3s;
-    -ms-transition: all .3s;
 }
 
 h1, .h1, h2, .h2, h3, .h3 {
@@ -68,37 +95,63 @@ p {
     text-align: justify;
 }
 
-.portfolio-item {
-    margin-bottom: 15px;
-}
-
 img {
     display: block;
     width: 100%;
+    max-width: 300px;
     margin: 0 auto;
 }
 
-img.portrait {
-    max-width: 300px;
+.portrait {
+    margin-bottom: 30px;
 }
 
-img.logo {
-    max-width: 400px;
+.name {
+    margin-top: 2000px;
+    font-size: 2.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .05em;
 }
 
-#intro {
-    min-height: 100%;
+.description {
+    font-size: 1.25em;
+    font-weight: 700;
 }
 
-@media (min-height: 300px) {
-    #intro {
-        padding-top: 30vh;
+@media (min-width: 480px) {
+    .name {
+        font-size: 3em;
+    }
+
+    .description {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 768px) {
+    .name {
+        font-size: 4em;
+    }
+
+    .description {
+        font-size: 2em;
     }
 }
 
 section {
-    padding: 90px 0 120px;
+    padding: 80px 0 120px;
     background-color: #fff;
+}
+
+section:first-of-type {
+    min-height: 100%;
+}
+
+@media (min-height: 400px) {
+    section:first-of-type {
+        padding-top: 20vh;
+    }
 }
 
 section.colored {
@@ -128,6 +181,10 @@ section.colored hr.star:after {
     background-color: #fff8b2;
 }
 
+.portfolio-item {
+    margin-bottom: 15px;
+}
+
 footer {
     height: 200px;
     padding-top: 30px;
@@ -135,33 +192,52 @@ footer {
     background-color: #334D5C;
 }
 
-.social-btn {
-    color: #fff;
-    font-size: 3.5em;
+.btn {
+    display: table;
+    vertical-align: middle;
+    font-size: 3em;
+    color: currentColor;
+    text-align: center;
+    width: 1.1em;
+    height: 1.1em;
+    padding: 0;
+    border: .05em solid currentColor;
+    border-radius: 100%;
 }
 
-.social-btn:hover, .social-btn:focus, .social-btn:active {
-    color: #fff;
+.btn:hover, .btn:focus, .btn:active {
+    color: currentColor;
     outline: none;
 }
 
-.social-btn > i {
-    transition: all 0.8s;
-    -webkit-transition: all 0.8s;
-    -moz-transition: all 0.8s;
-    -o-transition: all 0.8s;
-    -ms-transition: all 0.8s;
+.btn > i {
+    display: table-cell;
+    padding: 0;
 }
 
-.social-btn:hover > i, .social-btn:focus > i, .social-btn:active > i {
-    transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -ms--transform: rotate(360deg);
+.btn-social > i {
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
+}
 
-    transition: all 0.4s;
+.btn-social:hover > i, .btn-social:focus > i, .btn-social:active > i {
+    -webkit-transform: scale(1.2) rotate(360deg);
+    -moz-transform: scale(1.2) rotate(360deg);
+    -ms-transform: scale(1.2) rotate(360deg);
+    -o-transform: scale(1.2) rotate(360deg);
+    transform: scale(1.2) rotate(360deg);
+
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
-    -o-transition: all 0.4s;
     -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+i.fa-linkedin, i.fa-stack-overflow {
+    padding-top: .35em;
+    font-size: .6em;
 }
