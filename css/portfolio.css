@@ -155,17 +155,30 @@ footer {
     background-color: #334D5C;
 }
 
-.social-btn {
-    color: #fff;
-    font-size: 3.5em;
+.btn {
+    display: table;
+    vertical-align: middle;
+    font-size: 3em;
+    color: currentColor;
+    text-align: center;
+    width: 1.1em;
+    height: 1.1em;
+    padding: 0;
+    border: .05em solid currentColor;
+    border-radius: 100%;
 }
 
-.social-btn:hover, .social-btn:focus, .social-btn:active {
-    color: #fff;
+.btn:hover, .btn:focus, .btn:active {
+    color: currentColor;
     outline: none;
 }
 
-.social-btn > i {
+.btn > i {
+    display: table-cell;
+    padding: 0;
+}
+
+.btn-social > i {
     -webkit-transition: all 0.8s;
     -moz-transition: all 0.8s;
     -ms-transition: all 0.8s;
@@ -173,7 +186,7 @@ footer {
     transition: all 0.8s;
 }
 
-.social-btn:hover > i, .social-btn:focus > i, .social-btn:active > i {
+.btn-social:hover > i, .btn-social:focus > i, .btn-social:active > i {
     -webkit-transform: scale(1.2) rotate(360deg);
     -moz-transform: scale(1.2) rotate(360deg);
     -ms-transform: scale(1.2) rotate(360deg);
@@ -185,4 +198,9 @@ footer {
     -ms-transition: all 0.4s;
     -o-transition: all 0.4s;
     transition: all 0.4s;
+}
+
+i.fa-linkedin {
+    padding-top: .35em;
+    font-size: .6em;
 }
