@@ -200,7 +200,7 @@ footer {
     transition: all 0.4s;
 }
 
-i.fa-linkedin {
+i.fa-linkedin, i.fa-stack-overflow {
     padding-top: .35em;
     font-size: .6em;
 }
