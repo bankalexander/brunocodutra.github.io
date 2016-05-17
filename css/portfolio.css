@@ -3,6 +3,19 @@ html, body {
     height: 100%;
 }
 
+.tease {
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    text-transform: none;
+    letter-spacing: normal;
+    background-color: #80fe9a;
+}
+
+.tease:hover {
+    background-color: #67e581;
+}
+
 .navbar {
     text-transform: uppercase;
     letter-spacing: .1em;
